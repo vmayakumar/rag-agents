@@ -199,15 +199,6 @@ python -m src_langchain.demo
 python -m src_langgraph.demo
 ```
 
-### Individual Component Testing
-```bash
-# Test embedding manager
-python -c "from src_custom.embedding_manager import EmbeddingManager; em = EmbeddingManager(); print('Embedding manager works!')"
-
-# Test memory manager
-python -c "from src_custom.memory_manager import ConversationBufferWindowMemory; mem = ConversationBufferWindowMemory(); print('Memory manager works!')"
-```
-
 ## 🐛 Troubleshooting
 
 ### Common Issues
@@ -229,19 +220,6 @@ python -c "from src_custom.memory_manager import ConversationBufferWindowMemory;
    ModuleNotFoundError: No module named 'src_custom'
    ```
    **Solution**: Run from the project root directory
-
-4. **Memory Issues**
-   ```
-   Error: CUDA out of memory
-   ```
-   **Solution**: Reduce batch sizes or use CPU-only mode
-
-### Debug Mode
-```bash
-# Enable debug logging
-export PYTHONPATH="${PYTHONPATH}:$(pwd)"
-python -m src_custom.demo --debug
-```
 
 ## 📖 Learning Path
 
@@ -274,19 +252,6 @@ We welcome contributions! Here's how you can help:
 ## 📄 License
 
 This project is licensed under the MIT License for anyone to learn from, modify, and reuse with proper attribution. See the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- OpenAI for providing the embedding and language models
-- Pinecone for the vector database infrastructure
-- LangChain team for the excellent framework
-- LangGraph team for the workflow orchestration capabilities
-
-## 📞 Support
-
-- **Issues**: [GitHub Issues](https://github.com/your-repo/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/your-repo/discussions)
-- **Email**: your-email@example.com
 
 ---
 
